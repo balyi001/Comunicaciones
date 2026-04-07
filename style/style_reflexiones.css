@@ -1,0 +1,90 @@
+@import "style.css";
+
+.main-header {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.main-header h1 {
+    color: #1a237e;
+    font-size: 2.5rem;
+}
+
+/* Tarjeta de Reflexión */
+.reflexion-card {
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.reflexion-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+}
+
+.text-side {
+    flex: 1;
+}
+
+.text-side h2 {
+    color: #3949ab;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.historia {
+    font-style: italic;
+    line-height: 1.8;
+    color: #555;
+}
+
+.image-side {
+    flex: 1;
+    max-width: 400px;
+}
+
+.img-reflexion {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Cuadro de Solución */
+.solucion-box {
+    background: #e8eaf6;
+    padding: 25px 30px;
+    border-top: 4px solid #1a237e;
+}
+
+.solucion-box h3 {
+    color: #1a237e;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Invertir orden en la segunda tarjeta para variedad visual */
+.reflexion-card.invert .card-content {
+    flex-direction: row-reverse;
+}
+
+/* Responsive para celulares */
+@media (max-width: 768px) {
+    .card-content, .reflexion-card.invert .card-content {
+        flex-direction: column;
+    }
+    .image-side {
+        max-width: 100%;
+        width: 100%;
+    }
+}

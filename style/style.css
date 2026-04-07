@@ -61,3 +61,54 @@ ul {
 ul li {
     margin-bottom: 0.5rem;
 }
+
+
+.image-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.img-main {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-wrapper-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.img-side {
+    width: 40%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.analysis-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.img-small {
+    width: 30%;
+    border-radius: 50%; /* Opcional: hace la imagen circular */
+    border: 3px solid #1a237e;
+}
+
+/* Para celulares, que se pongan una debajo de otra */
+@media (max-width: 768px) {
+    .image-wrapper-side, .analysis-section {
+        flex-direction: column;
+    }
+    .img-side, .img-small {
+        width: 100%;
+    }
+}
